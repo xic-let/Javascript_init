@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Funcoes</title>
+</head>
+<body>
+
+    <script>
+        function somar(n1, n2){
+           return n1 + n2;
+          
+        }
+
+        var soma = somar(10, 20)
+        console.log('A soma é ' + soma);
+
+
+        console.log('---------------------------');
+
+        x =20;
+        y = 15;
+
+        function mostrarxy(){
+
+            var x = 50;
+            var y = 10;
+
+
+            console.log('x = ' + x);
+            console.log('y = ' + y);
+        }
+
+        mostrarxy();
+        console.log('x = ' + x);
+        console.log('y = ' + y);
+
+        console.log('---------------------------');
+        //IIE - Immediately Invoked Function Expression
+        //Funcao auto invocada
+        (function(){
+            function somar(){
+            
+                console.log(arguments);
+                var res = 0;
+                var x = 0;
+                while(typeof arguments[x]==='number'){ //typeof verifica o tipo de variavel e neste caso verifica se é um numero e converte
+                    res += arguments[x];
+                    x++;
+                }
+                console.log('A soma é ' + res);
+            }
+            somar(10,0,15,20);
+        })();
+
+        console.log('---------------------------');
+        (function(){
+            function media(){
+            
+                console.log(arguments);
+                var res = 0;
+                var x = 0;
+            
+                while(typeof arguments[x]==='number'){ 
+                    res += arguments[x];
+                    x++;
+                }
+                var res = res / x;
+                console.log('A média é ' + res);
+                console.log(' O numero de argumentos é:', arguments.length);
+            }
+            media(10,20,30,40);
+        })();
+
+        console.log('---------------------------');
+
+    </script>
+    
+    <style>
+
+
+
+    </style>
+</body>
+</html>

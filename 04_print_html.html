@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-Trabalhar com dados Escrever na folha HTML</title>
+</head>
+<body>
+    <h1>Evento on Click</h1>
+    <button onclick="clicar()"> Click para Inserir nome</button>
+    <button ondblclick="dblclicar()"> Duplo Click para inserir morada</button>
+    <button onmouseover="mouseover()"> Passe o rato para ver o que a sorte lhe reserva para hoje</button>
+    
+    <br>
+    <Article>
+    <section id="resultado">
+        <p>Aqui vai aparecer o nome</p>
+
+    </section>
+    <section id="resultado2">
+        <p>Aqui vai aparecer a morada</p>
+
+    </section>
+    <section id="resultado3">
+        <p>Acredita no destino?</p>
+
+    </section>
+    </Article>
+
+
+    <script>
+        function clicar(){
+        var nome = prompt("Qual é o seu nome?");
+           var  res=window.document.getElementById('resultado');
+           res.innerHTML = `Olá ${nome}, tudo bem?`;
+        }
+
+        function dblclicar(){
+            var morada = window.prompt("Qual é a sua morada?");
+               var  res=window.document.getElementById('resultado2');
+               res.innerHTML = `Tem residencia em ${morada}.`;
+        }
+
+        function mouseover(){
+            var sina = window.prompt("Deseja saber a sua sorte?");
+            if (sina == "sim"){
+                var  res=window.document.getElementById('resultado3');
+                res.innerHTML = `A sua sorte para hoje é: faça pela vida antes que vida faça por si!`;
+            }else{ 
+                var  res=window.document.getElementById('resultado3');
+                res.innerHTML = `Então não tenho nada para te dizer`;
+        }
+    }
+
+    </script>
+    
+    <style>
+body{
+    font: 12pt Arial;
+    background-color: rgb(216, 193, 185);
+    justify-content: center;
+}
+
+button{ 
+position: relative;
+background-color: 
+white; 
+width:25%;
+border: 1px solid blanchedalmond;
+border-radius: 8px;
+color: black;
+padding: 16px 30px;
+margin: 10px;
+text-align: center;
+display:grid;
+font-size: 16px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+
+}
+
+
+
+    </style>
+</body>
+</html>
