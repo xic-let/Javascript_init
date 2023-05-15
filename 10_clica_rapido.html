@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Contador  de Clicks</h1>
+   <button onclick="contador()">Clica aqui as vezes que quiseres!</button>
+   <button onclick="zera()">Recomeçar</button>
+<section id="result">
+    <p> Já clicou 0 Vezes</p>
+</section>
+
+    <script>
+        var res = document.querySelector('section#result');
+        var counter = 0;
+        
+        function zera(){
+            counter = 0;
+            res.innerHTML=`<p>Já clicou ${counter} vezes </p>`;
+
+        }
+
+        function contador(){
+            counter++;
+            res.innerHTML=`<p>Já clicou ${counter} vezes </p>`;
+        }
+   
+    </script>
+    
+    <style>
+        
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos em JS</title>
+</head>
+<body>
+    <h1>Calculos em JavaScript</h1>
+   <button onclick="calc()">Calcular</button>
+
+<section id="result">
+    
+    <p>O resultado vai aparecer aqui</p>
+</section>
+
+    <script>
+    
+        function calc(){
+            let number1 = Number(prompt('Digite o primeiro numero'));
+
+            let res=document.querySelector('section#result');
+            res.innerHTML = `<p>O numero quevinseriu foi o  ${number1}</p>`;
+            res.innerHTML += `<p>o numero absoluto de ${number1} é ${Math.abs(number1)}</p>`;
+            res.innerHTML += `<p>A raiz quadrada de  ${number1}<sup>2</sup> é ${Math.sqrt(number1)}</p>`;
+            res.innerHTML += `<p>a parte inteira de ${number1} é ${Math.trunc(number1)}</p>`;
+            res.innerHTML += `<p>o numero arredondado de ${number1} é ${Math.round(number1)}</p>`;
+            res.innerHTML += `<p>o numero arredondado para cima de ${number1} é ${Math.ceil(number1)}</p>`;
+            res.innerHTML += `<p>o numero arredondado para baixo de ${number1} é ${Math.floor(number1)}</p>`;
+            res.innerHTML += `<p>o numero arredondado para 2 casas decimais de ${number1} é ${number1.toFixed(2)}</p>`;
+            res.innerHTML += `<p>a raiz cubica de ${number1} é ${Math.cbrt(number1)}</p>`;
+            res.innerHTML += `<p>o numero ${number1} elevado ao quadrado é ${Math.pow(number1,2)}</p>`; 
+            res.innerHTML += `<p>o numero ${number1} elevado ao cubo é ${Math.pow(number1,3)}</p>`;
+            res.innerHTML += `<p> gera um numero aleatorio entre 0 e 1 ${Math.random()*10}</p>`;
+        }
+    </script>
+    
+    <style>
+
+
+
+    </style>
+</body>
+</html>
