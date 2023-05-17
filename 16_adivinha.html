@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha</title>
+</head>
+<body>
+    <body onload="rand_num()">
+        <h1>Adivinha o número que estou a pensar! </h1>
+        <p>Já gerei o número! <br> Let the game begin.... ahahahahahah!!!!</p>
+    <div>
+        <button onclick="jogar()">Aposta um numero</button>
+    </div>
+    
+        <script>
+
+            var aleatorio;
+            var num;
+
+            function rand_num(){
+                aleatorio=Math.trunc(Math.random()*100)+1;
+            }
+            
+
+            function jogar(){
+                num = Number(window.prompt('Aposta um numero entre 1 e 100'));
+                window.alert(num);
+                //window.alert(aleatorio);
+
+                if(num == aleatorio)
+                {
+                    window.alert('Acertaste!!!');
+                }
+                if(num > aleatorio)
+                {
+                    window.alert('O numero que estou a pensar é menor');
+                }
+                else if (aleatorio > num)
+                {
+                    window.alert('O numero que estou a pensar é maior');
+                }
+            }
+  
+    </script>
+
+    
+    
+    <style>
+        body{
+            margin: auto;
+            background-color: #dde9d3;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        
+        div {
+            width: 1000px;
+            margin: 10em auto;
+            text-align: center;
+        }
+        button{
+            
+            padding: 30px 50px;
+            border:darkviolet;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            align-items: center;
+            text-size-adjust: 20px;
+           
+        }
+        button:hover{
+            background-color: #444;
+        }
+        section#result{
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        @media only screen and (max-width: 330px) {
+            div {
+                width: 250px;
+            }
+        }
+    </style>
+</body>
+</html>
