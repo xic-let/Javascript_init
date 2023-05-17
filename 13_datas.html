@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    <body>
+        <h1>Que Dia é Hoje? </h1>
+    <div>
+        <button onclick="seedata()">Click para ver</button>
+
+        <p id = "result">O resultado vai aparecer aqui</p>
+    </div>
+    
+        <script>
+            
+                var data_actual = new Date();
+                var res = document.querySelector('p#result');
+                
+            function seedata(){
+                res.innerHTML = (`<p> A data actual é ${data_actual}.</p>`);
+                res.innerHTML += (`<p> O dia da semana é ${data_actual.getDay()} (Domingo é o dia 0 da semana). </p>`);
+                res.innerHTML += (`<p> O dia do mês é ${data_actual.getDate()} .</p>`);
+                res.innerHTML += (`<p> O mês é ${data_actual.getMonth()} .(O mês de janeiro é o mês 0)</p>`);
+                res.innerHTML += (`<p> O ano é ${data_actual.getFullYear()} .</p>`);
+                res.innerHTML += (`<p> A hora é ${data_actual.getHours()} .</p>`);
+                res.innerHTML += (`<p> Os minutos são ${data_actual.getMinutes()} .</p>`);
+                res.innerHTML += (`<p> Os segundos são ${data_actual.getSeconds()} .</p>`);
+                res.innerHTML += (`<p> São ${data_actual.getHours()}:${data_actual.getMinutes()}:${data_actual.getSeconds()} .</p>` )
+            }
+    
+  
+    </script>
+    
+    <style>
+        body{
+            margin: auto;
+            background-color: #dde9d3;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        
+        div {
+            width: 1000px;
+            margin: 10em auto;
+            text-align: center;
+        }
+        button{
+            
+            padding: 30px 50px;
+            border:darkviolet;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            align-items: center;
+            text-size-adjust: 20px;
+           
+        }
+        button:hover{
+            background-color: #444;
+        }
+        section#result{
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        @media only screen and (max-width: 330px) {
+            div {
+                width: 250px;
+            }
+        }
+    </style>
+</body>
+</html>

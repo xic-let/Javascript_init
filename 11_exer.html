@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador de Numeros</title>
+</head>
+<body>
+    <body>
+        <h1>Mostra o Numero Maior</h1>
+        <button onclick="maior()">Ordena</button>
+
+        <p id = "result">O resultado vai aparecer aqui</p>
+    
+    
+        <script>
+            function maior(){
+                
+                var n1 = prompt('Digite o primeiro numero');
+                var n2 = prompt('Digite o segundo numero');
+                var n3 = prompt('Digite o terceiro numero');
+                var n4 = prompt('Digite o quarto numero');
+                var res = document.querySelector('p#result');
+                
+                if(n1 > n2 && n1 > n3 && n1 > n4){
+                    res.innerHTML =(`<p> O numero maior é ${n1}</p>`);
+                }
+                if(n2 > n1 && n2 > n3 && n2 > n4){
+                    res.innerHTML =(`<p> O numero maior é ${n2}</p>`);
+                }
+                if(n3 > n1 && n3 > n2 && n3 > n4){
+                    res.innerHTML =(`<p> O numero maior é  ${n3}</p>`); 
+                }
+                else{
+                    res.innerHTML =(`<p> O numero maior é ${n4}</p>`);
+                }
+                
+            }
+    
+  
+    </script>
+    
+    <style>
+        body{
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover{
+            background-color: #444;
+        }
+        section#result{
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    <body>
+        <h1>Que Dia é Hoje? </h1>
+    <div>
+        <button onclick="seedata()">Click para ver</button>
+
+        <p id = "result">O resultado vai aparecer aqui</p>
+    </div>
+    
+        <script>
+            
+                var data_actual = new Date();
+                var res = document.querySelector('p#result');
+                
+            function seedata(){
+                var meses = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto', 'Setembro','Outubro','Novembro','Dezembro'); //array de meses
+                window.alert(`O mês actual é ${meses[4]}`); // mostra o mês actual
+                res.innerHTML = (`<p> o mês actual é ${meses[data_actual.getMonth()]}.</p>`); // mostra o mês actual mas com recurso ao array criado
+            }
+    
+  
+    </script>
+    
+    <style>
+        body{
+            margin: auto;
+            background-color: #dde9d3;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        
+        div {
+            width: 1000px;
+            margin: 10em auto;
+            text-align: center;
+        }
+        button{
+            
+            padding: 30px 50px;
+            border:darkviolet;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            align-items: center;
+            text-size-adjust: 20px;
+           
+        }
+        button:hover{
+            background-color: #444;
+        }
+        section#result{
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        @media only screen and (max-width: 330px) {
+            div {
+                width: 250px;
+            }
+        }
+    </style>
+</body>
+</html>
