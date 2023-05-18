@@ -17,38 +17,45 @@
             background-image: url('bkgd2.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
 </style>
-
 <script>
+
     function tabuada()
     {
-        windows.alert("Aqui vai aparecer a tabuada");
-    }
-    
+        var saida = document.getElementById("saida");
+        var n= Number(document.getElementById("numero").value);
+        saida.innerHTML = "<h2>Tabuada do " + n + "</h2>";
+        for(var i=1; i<=10; i++)
+        {
+            saida.innerHTML += n + " x " + i + " = " + n*i + "<br>";
+        }
+
+    }    
 </script>
     
 </head>
 <body>
     <h1>Tabuada do Ratinho</h1>
     <img src="mouse.png" alt="Ratinho" width="200px" height="200px">
-    <h2>Escolhe um numero para veres a sua tabuada</h2>
+    <h2>Escolhe um número para veres a sua tabuada</h2>
     
-    <section id="entrade de dados">
+    <section id="entrada de dados">
         
     <form action="#" method="get">
-        <label for="numero"> Introduza um Numero: </label>
-        <input type="number" min = 1 max = 10 required name="numero" id="numero" placeholder="nr.">
-        <input type="submit" value="Ver Tabuada" formaction="javacript:tabuada()">
+        <label for="numero"> Introduz um Número: </label>
+        <input type="number" min = 1 max = 100 required name="numero" id="numero" placeholder="nr." onclick="tabuada()">
+        <!-- <input type="submit" value="Ver Tabuada" formaction="javascript:tabuada()"> -->
     </form>
+
     </section>
 
     <section id="saida">
-        <p>Os dados vão aparecer aqui</p>
+       <h2> <p>Estuda, Não decores...</p> </h2>
 
     </section>
 
-    
 
 </body>
 </html>
