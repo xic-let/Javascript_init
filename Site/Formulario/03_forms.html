@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/forms.css">
+    <title>Objectos de Formulário</title>
+</head>
+<header>
+    <body>
+    <div class="banner-area">
+<h2>Candidatura</h2>
+</div>
+</header>
+    <form action="#" autocomplete="off">
+    <fieldset>
+       <Article>
+            <legend><h1>Dados Pessoais</h1></legend>
+            <label for="nome">Nome</label>
+            <input type="text" maxlength="20">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Digite um email válido">
+            <br>
+            <label for="agregado">Agregado Familiar</label>
+            <input type="number" min="1" max="10">
+            <br>
+            <label for="data">Data de Nascimento</label>
+            <input type="date" min="01/01/1950" max="08/05/2023">
+            <br>
+        </Article>
+
+        <Article>
+        <div class="row">  
+            <div class="column">
+            <legend><h1>Estado civil</h1></legend>
+            <label for="solteiro">
+            <input type="radio" name="estado_civil" value="sol">Solteiro
+        </label>
+        <label for="casado">
+            <input type="radio" name="estado_civil" value="cas">Casado
+        </label>
+        <label for="divorciado">
+            <input type="radio" name="estado_civil" value="div">Divorciado
+        </label>
+        <label for="Viuvo">
+            <input type="radio" name="estado_civil" value="viu">Viúvo
+        </label>
+            </div>
+            <div style ='float:right' class="column">
+            <legend><h1>Sexo</h1></legend>
+            <label for="feminino">
+            <input type="radio" name="sexo" value="fem">Feminino
+            </label>
+            <label for="masculino">    
+            <input type="radio" name="sexo" value="masc">Masculino
+            </label>
+            <label for="nd">
+            <input type="radio" name="sexo" value="nd">Prefiro não dizer
+            </label>
+            </div>
+            <div style ='float:center' class="column">
+            <legend><h1>Situação Profissional</h1></legend>
+            <label for="desld">
+            <input type="radio" name="rendimento" value="desld">Desempregado longa Duração
+            </label>
+            <label for="desemp">
+            <input type="radio" name="rendimento" value="desemp1">Desempregado 
+            </label>
+            <label for="empcp">
+                <input type="radio" name="rendimento" value="empcp">Empregado por conta própria
+                </label>
+                <label for="empregado">
+                <input type="radio" name="rendimento" value="emp">Empregado por conta de outrém
+                </label>
+            </div>
+            </div>
+
+        </article>
+        </fieldset>
+
+        <fieldset>
+            <article>
+                <div class="row">  
+                <div class="column">
+            <legend><h1>Áreas de Interesse</legend></h1>
+            <label for="interesse">
+            <input type="checkbox" name="interesse" value="FTEND">FrontEnd
+            </label>
+            <label for="interesse">
+            <input type="checkbox" name="interesse" value="bkend">BackEnd
+            </label>
+            <label for="interesse">
+            <input type="checkbox" name="interesse" value="FS">FullStack
+            </label>
+            </div>
+            <div class = "column">
+            <legend><h1>Escolha uma Linguagem </h1></legend>   
+                <select name="linguagem" id=""size="8" multiple>
+                <optgroup label="FrontEnd">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+                <optgroup label="BackEnd">
+                    <option value="java">JAVA</option>
+                    <option value="c#">C#</option>
+                    <option value="python">Python</option>
+                </optgroup>
+                </select>
+            </div>
+            <div class ="column">
+            <legend><h1>Escolha uma Linguagem</h1> </legend>   
+                <input type="text" list="lista">
+                    <datalist id="lista">
+                        <option value="html">
+                        <option value="css">
+                        <option value="js">
+                        <option value="java">
+                        <option value="c#">
+                        <option value="python">
+                    </datalist>
+            </div>
+            </div>
+            </article>
+        </fieldset>
+        <fieldset> 
+             <article>
+                <div>
+                <legend><h1>Insira o seu CV</h1></legend>
+                <input type="file" name="cv" accept=".pdf">
+                <br>
+                <br>
+                </div>
+            </article>
+        </fieldset>
+
+        <fieldset>
+            <legend ><h2>Mensagem</h2></legend>
+            <textarea name="msg" id="" cols="30" rows="10" placeholder="Escreva aqui a sua mensagem"></textarea>
+        </fieldset>
+
+        <br>
+        <br>
+<fieldset>
+    <legend><h3>Permissões RGPD</legend></h3>
+<textarea cols="30" rows="10" readonly>
+Contrato de utilizador:
+1.blablabla
+2.blablabla
+3.blablabla
+</textarea>
+
+    <label>
+        <input type="checkbox" name="contrato"> Li e Aceito os termos do contrato
+    </label>
+        <br>
+ </fieldset>
+ <br> 
+ <fieldset>
+    <article>
+ <div class="actions">
+    <input type="reset" value="Limpar">
+    <input type="submit" value="Enviar">
+</div>
+</article>
+</fieldset>
+</form>
+</body>
+</html>
